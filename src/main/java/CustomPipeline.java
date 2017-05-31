@@ -22,14 +22,14 @@ import static fr.isae.iqas.model.request.Operator.NONE;
  * SimpleFilteringPipeline is an example of QoO pipeline provided by the iQAS platform.
  * It can be modified according to user needs.
  */
-public class CustomPipeline1 extends AbstractPipeline implements IPipeline {
+public class CustomPipeline extends AbstractPipeline implements IPipeline {
     private Graph runnableGraph = null;
 
-    public CustomPipeline1() {
-        super("Custom Pipeline 1", "CustomPipeline1", true);
+    public CustomPipeline() {
+        super("Custom Pipeline", "CustomPipeline", true);
 
         addSupportedOperator(NONE);
-        setParameter("nb_copies", String.valueOf(0), true);
+        setParameter("nb_copies", String.valueOf(1), true);
     }
 
     @Override
