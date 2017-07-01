@@ -23,11 +23,9 @@ import static fr.isae.iqas.model.request.Operator.NONE;
  * It can be modified according to user needs.
  */
 public class CustomPipeline extends AbstractPipeline implements IPipeline {
-    private Graph runnableGraph = null;
 
     public CustomPipeline() {
         super("Custom Pipeline", "CustomPipeline", true);
-
         addSupportedOperator(NONE);
         setParameter("nb_copies", String.valueOf(1), true);
     }
@@ -36,7 +34,7 @@ public class CustomPipeline extends AbstractPipeline implements IPipeline {
     public Graph<FlowShape<ConsumerRecord<byte[], String>, ProducerRecord<byte[], String>>, Materializer> getPipelineGraph() {
 
         final ObservationLevel askedLevelFinal = getAskedLevel();
-        runnableGraph = GraphDSL
+        Graph runnableGraph = GraphDSL
                 .create(builder -> {
 
                     // ################################# YOUR CODE GOES HERE #################################
