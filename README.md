@@ -25,4 +25,4 @@ The iQAS platform have been developed during the PhD thesis of [Antoine Auger](h
 
 This research was supported in part by the French Ministry of Defence through financial support of the Direction Générale de l’Armement (DGA). 
 
-![iqas_logo](/src/main/resources/web/figures/banniere.png?raw=true "Banniere")
+![banniere](https://github.com/antoineauger/iqas-platform/blob/master/src/main/resources/web/figures/banniere.png?raw=true "Banniere")
