@@ -123,7 +123,7 @@ In total, 5 Github projects form the iQAS ecosystem:
     ```
 7. Locate the `.class` file corresponding to your QoO Pipeline. It should be in `$PIPELINE_DIR/target/classes/my_pipeline.class` 
 8. Copy and paste this `.class` file within the "qoo_pipelines_dir" directory of the iQAS platform.
-9. Register your new QoO Pipeline to the iQAS platform at [http://\[api_gateway_endpoint_address\]:\[api_gateway_endpoint_port\]/configuration](#)
+9. Register your new QoO Pipeline to the iQAS platform at <br/>[http://\[api_gateway_endpoint_address\]:\[api_gateway_endpoint_port\]/configuration](#)
 
 ## Acknowledgments
 

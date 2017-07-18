@@ -1,3 +1,4 @@
 target
 .idea
 iqas-pipelines.iml
+install_jar.sh
