@@ -50,6 +50,10 @@ public class CustomPipeline extends AbstractPipeline implements IPipeline {
                             })
                     );
 
+                    final FlowShape<RawData, RawData> replicationGS = builder.add(
+                            new CloneSameValueGS<RawData>(Integer.valueOf(getParams().get("nb_copies")))
+                    );
+
                     final FlowShape<RawData, ProducerRecord> rawDataToProdRecord = builder.add(
                             Flow.of(RawData.class).map(r -> {
                                 ObjectMapper mapper = new ObjectMapper();
@@ -59,7 +63,7 @@ public class CustomPipeline extends AbstractPipeline implements IPipeline {
                     );
 
                     builder.from(consumRecordToRawData.out())
-                            .via(builder.add(new CloneSameValueGS<RawData>(Integer.valueOf(getParams().get("nb_copies")))))
+                            .via(replicationGS)
                             .toInlet(rawDataToProdRecord.in());
 
                     // ################################# END OF YOUR CODE #################################
